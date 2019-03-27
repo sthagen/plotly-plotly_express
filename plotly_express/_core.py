@@ -693,7 +693,7 @@ def make_figure(args, constructor, trace_patch={}, layout_patch={}):
                     constructor = (
                         go.Scattergl if constructor == go.Scatter else go.Scatterpolargl
                     )
-            trace = trace_spec.constructor(name=trace_name or " ")
+            trace = trace_spec.constructor(name=trace_name)
             if trace_spec.constructor != go.Parcats:
                 trace.update(
                     legendgroup=trace_name,
